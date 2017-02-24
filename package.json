@@ -1,0 +1,26 @@
+{
+  "name": "geth-monitor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mormond/nodeapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mormond/nodeapp/issues"
+  },
+  "homepage": "https://github.com/mormond/nodeapp#readme",
+	"dependencies": {
+		"child_process": "*",
+		"exec": "*",
+		"web3": "*",
+	  	"sys": "*"
+	}
+}
