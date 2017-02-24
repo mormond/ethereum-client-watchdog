@@ -3,7 +3,7 @@ var web3 = new Web3();
 var sys = require('sys');
 var exec = require('child_process').exec
 
-web3.setProvider(new web3.providers.HttpProvider('http://13.95.8.186:8545'));
+web3.setProvider(new web3.providers.HttpProvider('http://0.0.0.0:8545'));
 function puts(error, stdout, stderr) {	sys.puts(stdout) }
 
 var interval = 60 * 1000;
