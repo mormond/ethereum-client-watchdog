@@ -16,7 +16,7 @@ setInterval(function() {
 		console.log("Everything looks ok!")
 		previousBlockNumber = currentBlockNumber;
 	} else {
-		console.log("Thing might have staled, let me give it a kick!")
+		console.log("Thing might have stalled, let me give it a kick!")
 		exec("pm2 restart gethNode", puts)	
 	}
 }, interval)
