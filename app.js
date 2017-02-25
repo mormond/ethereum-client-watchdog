@@ -6,7 +6,8 @@ var exec = require('child_process').exec
 web3.setProvider(new web3.providers.HttpProvider('http://0.0.0.0:8545'));
 function puts(error, stdout, stderr) {	sys.puts(stdout) }
 
-var interval = 60 * 1000;
+var interval = 600 * 1000;
+
 var previousBlockNumber = 0;
 setInterval(function() {
 	console.log("Checking status of local ethereum client")
