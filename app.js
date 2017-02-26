@@ -27,8 +27,8 @@ web3.setProvider(new web3.providers.HttpProvider(jsonRpcEndpoint));
 // Pipe output to stdout
 function puts(error, stdout, stderr) { sys.puts(stdout) }
 
-// Restart Geth process
-function restartGeth() {
+// Restart eth process
+function restartEth() {
     exec("pm2 restart " + processName, puts);
 }
 
@@ -43,10 +43,10 @@ setInterval(function () {
             previousBlockNumber = currentBlockNumber;
         } else {
             console.log("Block number appear to have stalled, let me give it a kick!");
-            restartGeth();
+            restartEth();
         }
     } catch (error) {
-        console.log("Exception querying geth: " + error);
-        restartGeth();
+        console.log("Exception querying JSON-RPC: " + error);
+        restartEth();
     }
 }, intervalInMilliseconds)
