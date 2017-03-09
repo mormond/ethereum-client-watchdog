@@ -9,12 +9,12 @@ var jsonRpcEndpoint = process.env.JSONRPC_ENDPOINT || 'http://0.0.0.0:8545';
 var intervalInSeconds = process.env.MONITOR_INTERVAL_SECS || 600;   // Default to 10 minutes
 var intervalInMilliseconds = intervalInSeconds * 1000;
 var previousBlockNumber = process.env.PREVIOUS_BLOCKNUMBER || 0;
-var processName = process.env.PM2_PROCESS_NAME || 'gethNode';
+var restartCommand = process.env.RESTART_COMMAND || 'pm2 restart gethNode';
 
 if(environment == 'development') {
     console.log("Development Environment");
     console.log("----------------------");
-    console.log("PM2 process name: " + processName);
+    console.log("Restart command: " + restartCommand);
     console.log("JSON-RPC endpoint: " + jsonRpcEndpoint);
     console.log("Interval (secs): " + intervalInSeconds);
     console.log("Initial block number: " + previousBlockNumber);
@@ -29,7 +29,7 @@ function puts(error, stdout, stderr) { sys.puts(stdout) }
 
 // Restart eth process
 function restartEth() {
-    exec("pm2 restart " + processName, puts);
+    exec(restartCommand, puts);
 }
 
 // Periodically check whether the block number is increasing
