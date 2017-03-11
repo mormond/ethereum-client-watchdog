@@ -9,18 +9,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mormond/nodeapp.git"
+    "url": "git+https://github.com/mormond/ethereum-client-watchdog.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mormond/nodeapp/issues"
+    "url": "https://github.com/mormond/ethereum-client-watchdog/issues"
   },
-  "homepage": "https://github.com/mormond/nodeapp#readme",
-	"dependencies": {
-		"child_process": "*",
-		"exec": "*",
-		"web3": "*",
-	  	"sys": "*"
-	}
+  "homepage": "https://github.com/mormond/ethereum-client-watchdog#readme",
+  "dependencies": {
+    "child_process": "*",
+    "exec": "*",
+    "web3": "*",
+    "sys": "*"
+  }
 }
